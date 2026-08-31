@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gerador de Relatório</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="editor no-print">
+    <h1>Gerador de relatório</h1>
+    <p>Edite os campos e acompanhe a página A4 em tempo real.</p>
+    <label>Cliente<input id="fName" value="Maria Silva"></label>
+    <label>Título<input id="fTitle" value="CONTROLE × LIBERDADE"></label>
+    <label>Subtítulo<textarea id="fSubtitle" rows="2">O desafio de construir segurança sem abrir mão da liberdade.</textarea></label>
+    <label>Base astrológica<textarea id="fBase" rows="6">Meio do Céu em quadratura com Ascendente em Peixes
+
+Urano em Peixes — Casa 12
+
+Júpiter em Escorpião em oposição a Marte em Touro</textarea></label>
+    <label>A dinâmica<textarea id="fDynamic" rows="7">Existe uma tensão entre a necessidade de construir segurança e o impulso de preservar liberdade. Quando a estrutura oferece segurança, ela é bem-vinda. Quando começa a parecer aprisionamento, surge uma urgência de liberdade que pode levar à ruptura.</textarea></label>
+    <label>Carreira<textarea id="fCareer" rows="3">Na tentativa de construir estabilidade sem abrir mão de autonomia e liberdade intelectual.</textarea></label>
+    <label>Relações<textarea id="fRelations" rows="3">Na dificuldade de deixar determinadas questões abertas ou confiar inteiramente no movimento do outro.</textarea></label>
+    <label>Decisões<textarea id="fDecisions" rows="3">Na tentativa de eliminar a incerteza antes de agir.</textarea></label>
+    <div class="buttons"><button id="printBtn">Gerar PDF</button><button id="resetBtn" class="secondary">Restaurar</button></div>
+    <small>Ao clicar em “Gerar PDF”, escolha <b>Salvar como PDF</b> e ative “gráficos de plano de fundo” se o navegador solicitar.</small>
+  </aside>
+
+  <main class="preview-wrap">
+    <article id="paper" class="paper">
+      <img class="background" src="fundos/pagina03-referencia.png" alt="">
+      <div class="wash"></div>
+      <div class="content">
+        <div class="client">RELATÓRIO PERSONALIZADO · <span id="pName"></span></div>
+        <div class="eyebrow">O QUE CONECTA OS PADRÕES ✦</div>
+        <h2 id="pTitle"></h2>
+        <div id="pSubtitle" class="subtitle"></div>
+        <section class="base"><h3>BASE ASTROLÓGICA</h3><div id="pBase" class="preline"></div></section>
+        <section class="dynamic"><h3>A DINÂMICA</h3><div id="pDynamic"></div></section>
+        <section class="career"><h3>CARREIRA</h3><div id="pCareer"></div></section>
+        <section class="relations"><h3>RELAÇÕES</h3><div id="pRelations"></div></section>
+        <section class="decisions"><h3>DECISÕES</h3><div id="pDecisions"></div></section>
+      </div>
+    </article>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
